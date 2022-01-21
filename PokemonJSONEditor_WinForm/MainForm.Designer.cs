@@ -103,6 +103,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.btnAddEvolution = new System.Windows.Forms.Button();
             this.btnRemoveEvolution = new System.Windows.Forms.Button();
+            this.btnSavePokeData = new System.Windows.Forms.Button();
+            this.btnPublishPokeData = new System.Windows.Forms.Button();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtJsonFile = new System.Windows.Forms.TextBox();
+            this.btnLoadJson = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -115,7 +120,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 10);
+            this.label1.Location = new System.Drawing.Point(12, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 15);
             this.label1.TabIndex = 0;
@@ -123,14 +128,14 @@
             // 
             // txtPokemonName
             // 
-            this.txtPokemonName.Location = new System.Drawing.Point(114, 10);
+            this.txtPokemonName.Location = new System.Drawing.Point(114, 35);
             this.txtPokemonName.Name = "txtPokemonName";
             this.txtPokemonName.Size = new System.Drawing.Size(301, 23);
             this.txtPokemonName.TabIndex = 1;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(421, 10);
+            this.btnSearch.Location = new System.Drawing.Point(421, 35);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
@@ -140,7 +145,7 @@
             // 
             // pokemonImage
             // 
-            this.pokemonImage.Location = new System.Drawing.Point(1006, 79);
+            this.pokemonImage.Location = new System.Drawing.Point(1006, 104);
             this.pokemonImage.Name = "pokemonImage";
             this.pokemonImage.Size = new System.Drawing.Size(281, 228);
             this.pokemonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -150,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 44);
+            this.label2.Location = new System.Drawing.Point(14, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 15);
             this.label2.TabIndex = 4;
@@ -158,7 +163,7 @@
             // 
             // txtPokeID
             // 
-            this.txtPokeID.Location = new System.Drawing.Point(67, 41);
+            this.txtPokeID.Location = new System.Drawing.Point(67, 66);
             this.txtPokeID.Name = "txtPokeID";
             this.txtPokeID.ReadOnly = true;
             this.txtPokeID.Size = new System.Drawing.Size(100, 23);
@@ -167,7 +172,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(182, 44);
+            this.label3.Location = new System.Drawing.Point(182, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 15);
             this.label3.TabIndex = 6;
@@ -175,14 +180,14 @@
             // 
             // txtPokeHeight
             // 
-            this.txtPokeHeight.Location = new System.Drawing.Point(234, 41);
+            this.txtPokeHeight.Location = new System.Drawing.Point(234, 66);
             this.txtPokeHeight.Name = "txtPokeHeight";
             this.txtPokeHeight.Size = new System.Drawing.Size(92, 23);
             this.txtPokeHeight.TabIndex = 7;
             // 
             // txtPokeWeight
             // 
-            this.txtPokeWeight.Location = new System.Drawing.Point(388, 41);
+            this.txtPokeWeight.Location = new System.Drawing.Point(388, 66);
             this.txtPokeWeight.Name = "txtPokeWeight";
             this.txtPokeWeight.Size = new System.Drawing.Size(92, 23);
             this.txtPokeWeight.TabIndex = 9;
@@ -190,7 +195,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(336, 44);
+            this.label4.Location = new System.Drawing.Point(336, 69);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 15);
             this.label4.TabIndex = 8;
@@ -198,7 +203,7 @@
             // 
             // txtCategory
             // 
-            this.txtCategory.Location = new System.Drawing.Point(555, 41);
+            this.txtCategory.Location = new System.Drawing.Point(555, 66);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(142, 23);
             this.txtCategory.TabIndex = 11;
@@ -206,7 +211,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(494, 44);
+            this.label5.Location = new System.Drawing.Point(494, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 15);
             this.label5.TabIndex = 10;
@@ -216,7 +221,7 @@
             // 
             this.listPokedex.FormattingEnabled = true;
             this.listPokedex.ItemHeight = 15;
-            this.listPokedex.Location = new System.Drawing.Point(11, 93);
+            this.listPokedex.Location = new System.Drawing.Point(11, 118);
             this.listPokedex.Name = "listPokedex";
             this.listPokedex.Size = new System.Drawing.Size(968, 214);
             this.listPokedex.TabIndex = 12;
@@ -224,7 +229,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 72);
+            this.label6.Location = new System.Drawing.Point(10, 97);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 15);
             this.label6.TabIndex = 13;
@@ -244,7 +249,7 @@
             this.groupBox1.Controls.Add(this.btnRemoveType);
             this.groupBox1.Controls.Add(this.btnAddType);
             this.groupBox1.Controls.Add(this.listPokeTypes);
-            this.groupBox1.Location = new System.Drawing.Point(14, 322);
+            this.groupBox1.Location = new System.Drawing.Point(14, 347);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(312, 129);
             this.groupBox1.TabIndex = 22;
@@ -276,7 +281,7 @@
             this.groupBox2.Controls.Add(this.btnRemoveWeakness);
             this.groupBox2.Controls.Add(this.listWeakness);
             this.groupBox2.Controls.Add(this.btnAddWeakness);
-            this.groupBox2.Location = new System.Drawing.Point(336, 322);
+            this.groupBox2.Location = new System.Drawing.Point(336, 347);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(312, 129);
             this.groupBox2.TabIndex = 23;
@@ -317,7 +322,7 @@
             this.groupBox3.Controls.Add(this.btnRemoveAbilities);
             this.groupBox3.Controls.Add(this.listAbilities);
             this.groupBox3.Controls.Add(this.btnAddAbilities);
-            this.groupBox3.Location = new System.Drawing.Point(667, 322);
+            this.groupBox3.Location = new System.Drawing.Point(667, 347);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(312, 129);
             this.groupBox3.TabIndex = 24;
@@ -368,7 +373,7 @@
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.txtHitPoint);
             this.groupBox4.Controls.Add(this.label7);
-            this.groupBox4.Location = new System.Drawing.Point(16, 464);
+            this.groupBox4.Location = new System.Drawing.Point(16, 489);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(368, 208);
             this.groupBox4.TabIndex = 25;
@@ -499,7 +504,7 @@
             this.groupBox5.Controls.Add(this.btnAddCatchLocation);
             this.groupBox5.Controls.Add(this.txtCatchRate);
             this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Location = new System.Drawing.Point(390, 466);
+            this.groupBox5.Location = new System.Drawing.Point(390, 491);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(402, 206);
             this.groupBox5.TabIndex = 26;
@@ -561,7 +566,7 @@
             this.groupBox6.Controls.Add(this.label15);
             this.groupBox6.Controls.Add(this.txtMalePercent);
             this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Location = new System.Drawing.Point(798, 464);
+            this.groupBox6.Location = new System.Drawing.Point(798, 489);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(207, 208);
             this.groupBox6.TabIndex = 27;
@@ -634,7 +639,7 @@
             // 
             // txtBaseExp
             // 
-            this.txtBaseExp.Location = new System.Drawing.Point(768, 41);
+            this.txtBaseExp.Location = new System.Drawing.Point(768, 66);
             this.txtBaseExp.Name = "txtBaseExp";
             this.txtBaseExp.Size = new System.Drawing.Size(54, 23);
             this.txtBaseExp.TabIndex = 29;
@@ -642,7 +647,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(707, 44);
+            this.label18.Location = new System.Drawing.Point(707, 69);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(54, 15);
             this.label18.TabIndex = 28;
@@ -650,7 +655,7 @@
             // 
             // txtEvolveFrom
             // 
-            this.txtEvolveFrom.Location = new System.Drawing.Point(1095, 318);
+            this.txtEvolveFrom.Location = new System.Drawing.Point(1095, 343);
             this.txtEvolveFrom.Name = "txtEvolveFrom";
             this.txtEvolveFrom.Size = new System.Drawing.Size(128, 23);
             this.txtEvolveFrom.TabIndex = 9;
@@ -658,7 +663,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(1019, 322);
+            this.label19.Location = new System.Drawing.Point(1019, 347);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(72, 15);
             this.label19.TabIndex = 8;
@@ -666,7 +671,7 @@
             // 
             // txtEvolveReason
             // 
-            this.txtEvolveReason.Location = new System.Drawing.Point(1095, 347);
+            this.txtEvolveReason.Location = new System.Drawing.Point(1095, 372);
             this.txtEvolveReason.Name = "txtEvolveReason";
             this.txtEvolveReason.Size = new System.Drawing.Size(128, 23);
             this.txtEvolveReason.TabIndex = 31;
@@ -674,7 +679,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(1015, 351);
+            this.label20.Location = new System.Drawing.Point(1015, 376);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(82, 15);
             this.label20.TabIndex = 30;
@@ -683,7 +688,7 @@
             // EV
             // 
             this.EV.AutoSize = true;
-            this.EV.Location = new System.Drawing.Point(1019, 459);
+            this.EV.Location = new System.Drawing.Point(1019, 484);
             this.EV.Name = "EV";
             this.EV.Size = new System.Drawing.Size(20, 15);
             this.EV.TabIndex = 32;
@@ -693,14 +698,14 @@
             // 
             this.listEV.FormattingEnabled = true;
             this.listEV.ItemHeight = 15;
-            this.listEV.Location = new System.Drawing.Point(1019, 477);
+            this.listEV.Location = new System.Drawing.Point(1019, 502);
             this.listEV.Name = "listEV";
             this.listEV.Size = new System.Drawing.Size(187, 184);
             this.listEV.TabIndex = 33;
             // 
             // btnRemoveEV
             // 
-            this.btnRemoveEV.Location = new System.Drawing.Point(1212, 528);
+            this.btnRemoveEV.Location = new System.Drawing.Point(1212, 553);
             this.btnRemoveEV.Name = "btnRemoveEV";
             this.btnRemoveEV.Size = new System.Drawing.Size(75, 23);
             this.btnRemoveEV.TabIndex = 23;
@@ -709,16 +714,17 @@
             // 
             // btnAddEV
             // 
-            this.btnAddEV.Location = new System.Drawing.Point(1212, 499);
+            this.btnAddEV.Location = new System.Drawing.Point(1212, 524);
             this.btnAddEV.Name = "btnAddEV";
             this.btnAddEV.Size = new System.Drawing.Size(75, 23);
             this.btnAddEV.TabIndex = 22;
             this.btnAddEV.Text = "Add";
             this.btnAddEV.UseVisualStyleBackColor = true;
+            this.btnAddEV.Click += new System.EventHandler(this.btnAddEV_Click);
             // 
             // btnNextPokemon
             // 
-            this.btnNextPokemon.Location = new System.Drawing.Point(502, 9);
+            this.btnNextPokemon.Location = new System.Drawing.Point(502, 34);
             this.btnNextPokemon.Name = "btnNextPokemon";
             this.btnNextPokemon.Size = new System.Drawing.Size(117, 23);
             this.btnNextPokemon.TabIndex = 34;
@@ -728,7 +734,7 @@
             // 
             // txtPokeImageURL
             // 
-            this.txtPokeImageURL.Location = new System.Drawing.Point(1006, 44);
+            this.txtPokeImageURL.Location = new System.Drawing.Point(1006, 69);
             this.txtPokeImageURL.Name = "txtPokeImageURL";
             this.txtPokeImageURL.Size = new System.Drawing.Size(217, 23);
             this.txtPokeImageURL.TabIndex = 35;
@@ -736,7 +742,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(1006, 23);
+            this.label21.Location = new System.Drawing.Point(1006, 48);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(67, 15);
             this.label21.TabIndex = 36;
@@ -744,7 +750,7 @@
             // 
             // btnUpdateImage
             // 
-            this.btnUpdateImage.Location = new System.Drawing.Point(1229, 23);
+            this.btnUpdateImage.Location = new System.Drawing.Point(1229, 48);
             this.btnUpdateImage.Name = "btnUpdateImage";
             this.btnUpdateImage.Size = new System.Drawing.Size(75, 44);
             this.btnUpdateImage.TabIndex = 37;
@@ -754,7 +760,7 @@
             // 
             // btnJSONViewer
             // 
-            this.btnJSONViewer.Location = new System.Drawing.Point(624, 9);
+            this.btnJSONViewer.Location = new System.Drawing.Point(624, 34);
             this.btnJSONViewer.Name = "btnJSONViewer";
             this.btnJSONViewer.Size = new System.Drawing.Size(99, 23);
             this.btnJSONViewer.TabIndex = 38;
@@ -766,7 +772,7 @@
             // 
             this.listEvolutions.FormattingEnabled = true;
             this.listEvolutions.ItemHeight = 15;
-            this.listEvolutions.Location = new System.Drawing.Point(1095, 376);
+            this.listEvolutions.Location = new System.Drawing.Point(1095, 401);
             this.listEvolutions.Name = "listEvolutions";
             this.listEvolutions.Size = new System.Drawing.Size(128, 94);
             this.listEvolutions.TabIndex = 39;
@@ -774,7 +780,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(1019, 378);
+            this.label22.Location = new System.Drawing.Point(1019, 403);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(65, 15);
             this.label22.TabIndex = 40;
@@ -782,7 +788,7 @@
             // 
             // btnAddEvolution
             // 
-            this.btnAddEvolution.Location = new System.Drawing.Point(1229, 378);
+            this.btnAddEvolution.Location = new System.Drawing.Point(1229, 403);
             this.btnAddEvolution.Name = "btnAddEvolution";
             this.btnAddEvolution.Size = new System.Drawing.Size(75, 23);
             this.btnAddEvolution.TabIndex = 41;
@@ -792,7 +798,7 @@
             // 
             // btnRemoveEvolution
             // 
-            this.btnRemoveEvolution.Location = new System.Drawing.Point(1229, 407);
+            this.btnRemoveEvolution.Location = new System.Drawing.Point(1229, 432);
             this.btnRemoveEvolution.Name = "btnRemoveEvolution";
             this.btnRemoveEvolution.Size = new System.Drawing.Size(75, 23);
             this.btnRemoveEvolution.TabIndex = 42;
@@ -800,11 +806,62 @@
             this.btnRemoveEvolution.UseVisualStyleBackColor = true;
             this.btnRemoveEvolution.Click += new System.EventHandler(this.btnRemoveEvolution_Click);
             // 
+            // btnSavePokeData
+            // 
+            this.btnSavePokeData.Location = new System.Drawing.Point(729, 34);
+            this.btnSavePokeData.Name = "btnSavePokeData";
+            this.btnSavePokeData.Size = new System.Drawing.Size(75, 23);
+            this.btnSavePokeData.TabIndex = 43;
+            this.btnSavePokeData.Text = "Save Data";
+            this.btnSavePokeData.UseVisualStyleBackColor = true;
+            this.btnSavePokeData.Click += new System.EventHandler(this.btnSavePokeData_Click);
+            // 
+            // btnPublishPokeData
+            // 
+            this.btnPublishPokeData.Location = new System.Drawing.Point(810, 34);
+            this.btnPublishPokeData.Name = "btnPublishPokeData";
+            this.btnPublishPokeData.Size = new System.Drawing.Size(105, 23);
+            this.btnPublishPokeData.TabIndex = 44;
+            this.btnPublishPokeData.Text = "Publish Data";
+            this.btnPublishPokeData.UseVisualStyleBackColor = true;
+            this.btnPublishPokeData.Click += new System.EventHandler(this.btnPublishPokeData_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(12, 9);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(59, 15);
+            this.label23.TabIndex = 45;
+            this.label23.Text = "JSON File:";
+            // 
+            // txtJsonFile
+            // 
+            this.txtJsonFile.Location = new System.Drawing.Point(77, 6);
+            this.txtJsonFile.Name = "txtJsonFile";
+            this.txtJsonFile.Size = new System.Drawing.Size(571, 23);
+            this.txtJsonFile.TabIndex = 46;
+            // 
+            // btnLoadJson
+            // 
+            this.btnLoadJson.Location = new System.Drawing.Point(654, 5);
+            this.btnLoadJson.Name = "btnLoadJson";
+            this.btnLoadJson.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadJson.TabIndex = 47;
+            this.btnLoadJson.Text = "Load JSON";
+            this.btnLoadJson.UseVisualStyleBackColor = true;
+            this.btnLoadJson.Click += new System.EventHandler(this.btnLoadJson_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1324, 696);
+            this.ClientSize = new System.Drawing.Size(1324, 712);
+            this.Controls.Add(this.btnLoadJson);
+            this.Controls.Add(this.txtJsonFile);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.btnPublishPokeData);
+            this.Controls.Add(this.btnSavePokeData);
             this.Controls.Add(this.btnRemoveEvolution);
             this.Controls.Add(this.btnAddEvolution);
             this.Controls.Add(this.label22);
@@ -939,5 +996,10 @@
         private Label label22;
         private Button btnAddEvolution;
         private Button btnRemoveEvolution;
+        private Button btnSavePokeData;
+        private Button btnPublishPokeData;
+        private Label label23;
+        private TextBox txtJsonFile;
+        private Button btnLoadJson;
     }
 }

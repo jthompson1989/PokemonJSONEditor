@@ -8,34 +8,13 @@ namespace PokemonJSONEditor_WinForm
 {
     public partial class MainForm : Form
     {
-        private string JsonFile = @"C:\Users\zombi\source\repos\PokemonJSONEditor_WinForm\PokemonJSONEditor_WinForm\pokemons.json";
+        private string jsonFile;//@"C:\Users\zombi\source\repos\PokemonJSONEditor_WinForm\PokemonJSONEditor_WinForm\pokemons.json";
         private Pokemon[] pokemons;
         private Pokemon selectedPokemon;
         private int selectedIndex;
         public MainForm()
         {
             InitializeComponent();
-            using (StreamReader r = new StreamReader(JsonFile))
-            {
-                string json = r.ReadToEnd();
-                //JObject data = JObject.Parse(File.ReadAllText(JsonFile));
-                pokemons = JsonConvert.DeserializeObject<Pokemon[]>(json);
-
-            }
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            selectedPokemon = pokemons.Where(p => p.name == txtPokemonName.Text).SingleOrDefault();
-            if (selectedPokemon != null)
-            {
-                selectedIndex = Array.IndexOf(pokemons, selectedPokemon);
-                LoadData(selectedPokemon);
-            }
-            else
-            {
-                MessageBox.Show("Pokemon Not Found");
-            }
         }
 
         private void LoadData(Pokemon pokemon)
@@ -148,6 +127,7 @@ namespace PokemonJSONEditor_WinForm
             Pokemon pokemon = new Pokemon();
 
             pokemon.id = txtPokeID.Text;
+            pokemon.name = txtPokemonName.Text;
             pokemon.height = txtPokeHeight.Text;
             pokemon.weight = txtPokeWeight.Text;
             pokemon.category = txtCategory.Text;
@@ -196,14 +176,14 @@ namespace PokemonJSONEditor_WinForm
             {
                 string json = JsonConvert.SerializeObject(pokemons, Formatting.Indented);
 
-                using (StreamWriter sw = new StreamWriter(JsonFile, false))
+                using (StreamWriter sw = new StreamWriter(jsonFile, false))
                 {
                     sw.Write(json);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -271,11 +251,12 @@ namespace PokemonJSONEditor_WinForm
             {
                 string game = listCatchLocation.Items[i].ToString().Split('-')[0].Trim();
                 string location = listCatchLocation.Items[i].ToString().Split('-')[1].Trim();
-                CatchLocation ev = new CatchLocation()
+                CatchLocation catchLocation = new CatchLocation()
                 {
                     game = game,
                     location = location.Split(',')
                 };
+                catchLocationsArray[i] = catchLocation;
             }
             return catchLocationsArray;
         }
@@ -289,8 +270,6 @@ namespace PokemonJSONEditor_WinForm
             }
             return evolutionsArray;
         }
-
-        
 
         public int AddTotalStats()
         {
@@ -310,7 +289,6 @@ namespace PokemonJSONEditor_WinForm
                 return 0;
             }
         }
-
         private void txtHitPoint_TextChanged(object sender, EventArgs e)
         {
             int total = AddTotalStats();
@@ -350,6 +328,20 @@ namespace PokemonJSONEditor_WinForm
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            selectedPokemon = pokemons.Where(p => p.name == txtPokemonName.Text).SingleOrDefault();
+            if (selectedPokemon != null)
+            {
+                selectedIndex = Array.IndexOf(pokemons, selectedPokemon);
+                LoadData(selectedPokemon);
+            }
+            else
+            {
+                MessageBox.Show("Pokemon Not Found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnNextPokemon_Click(object sender, EventArgs e)
@@ -408,6 +400,11 @@ namespace PokemonJSONEditor_WinForm
         {
             listCatchLocation.Items.Remove(listCatchLocation.SelectedItem);
         }
+        private void btnAddEV_Click(object sender, EventArgs e)
+        {
+            Add addForm = new Add(AddType.EV, listEV);
+            addForm.Show();
+        }
 
         private void btnJSONViewer_Click(object sender, EventArgs e)
         {
@@ -425,6 +422,50 @@ namespace PokemonJSONEditor_WinForm
         private void btnRemoveEvolution_Click(object sender, EventArgs e)
         {
             listEvolutions.Items.Remove(listEvolutions.SelectedItem);
+        }
+
+        private void btnSavePokeData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SaveData();
+                MessageBox.Show("Save Successful");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnPublishPokeData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                PublishData();
+                MessageBox.Show("Publish Successful");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLoadJson_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                jsonFile = txtJsonFile.Text;
+                using (StreamReader r = new StreamReader(jsonFile))
+                {
+                    string json = r.ReadToEnd();
+                    pokemons = JsonConvert.DeserializeObject<Pokemon[]>(json);
+                }
+                MessageBox.Show("JSON Load Successful");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 

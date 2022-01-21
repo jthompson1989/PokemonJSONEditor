@@ -13,24 +13,31 @@ namespace PokemonJSONEditor_WinForm
             {
                 case AddType.PokeTypes:
                     pokeTypeBox.Visible = true;
+                    pokeTypeBox.Location = new Point(12, 12);
                     break;
                 case AddType.Pokedex:
                     pokeDexAddBox.Visible = true;
+                    pokeDexAddBox.Location = new Point(12, 12);
                     break;
                 case AddType.Weakness:
                     weaknessBox.Visible = true;
+                    weaknessBox.Location = new Point(12, 12);
                     break;
                 case AddType.CatchLocation:
                     captureLocationBox.Visible = true;
+                    captureLocationBox.Location = new Point(12, 12);
                     break;
                 case AddType.Abilities:
                     abilitiesBox.Visible = true;
+                    abilitiesBox.Location = new Point(12, 12);
                     break;
                 case AddType.EV:
                     evBox.Visible = true;
+                    evBox.Location = new Point(12, 12);
                     break;
                 case AddType.Evolution:
                     evolutionBox.Visible = true;
+                    evolutionBox.Location = new Point(12, 12);
                     break;
                 default:
                     this.Close();

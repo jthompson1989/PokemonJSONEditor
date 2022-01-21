@@ -84,6 +84,7 @@
             this.pokeDexAddBox.TabIndex = 0;
             this.pokeDexAddBox.TabStop = false;
             this.pokeDexAddBox.Text = "Pokedex Entry";
+            this.pokeDexAddBox.Visible = false;
             // 
             // btnSavePokedexEntry
             // 
@@ -176,6 +177,7 @@
             this.pokeTypeBox.TabIndex = 5;
             this.pokeTypeBox.TabStop = false;
             this.pokeTypeBox.Text = "Poke Types";
+            this.pokeTypeBox.Visible = false;
             // 
             // label3
             // 
@@ -214,6 +216,7 @@
             this.weaknessBox.TabIndex = 7;
             this.weaknessBox.TabStop = false;
             this.weaknessBox.Text = "Weakness";
+            this.weaknessBox.Visible = false;
             // 
             // label4
             // 
@@ -252,6 +255,7 @@
             this.abilitiesBox.TabIndex = 8;
             this.abilitiesBox.TabStop = false;
             this.abilitiesBox.Text = "Abilities";
+            this.abilitiesBox.Visible = false;
             // 
             // label5
             // 
@@ -292,6 +296,7 @@
             this.captureLocationBox.TabIndex = 9;
             this.captureLocationBox.TabStop = false;
             this.captureLocationBox.Text = "Capture Location";
+            this.captureLocationBox.Visible = false;
             // 
             // label7
             // 
@@ -385,6 +390,7 @@
             this.evBox.TabIndex = 10;
             this.evBox.TabStop = false;
             this.evBox.Text = "EV";
+            this.evBox.Visible = false;
             // 
             // label9
             // 
@@ -447,6 +453,7 @@
             this.evolutionBox.TabIndex = 9;
             this.evolutionBox.TabStop = false;
             this.evolutionBox.Text = "Evolutions";
+            this.evolutionBox.Visible = false;
             // 
             // label10
             // 
@@ -478,7 +485,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 677);
+            this.ClientSize = new System.Drawing.Size(315, 264);
             this.Controls.Add(this.evolutionBox);
             this.Controls.Add(this.evBox);
             this.Controls.Add(this.captureLocationBox);

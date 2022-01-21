@@ -53,17 +53,22 @@
             this.txtCaptureLocation = new System.Windows.Forms.TextBox();
             this.btnSaveCaptureLocation = new System.Windows.Forms.Button();
             this.evBox = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtEVValue = new System.Windows.Forms.TextBox();
+            this.evStatDropDown = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSaveEV = new System.Windows.Forms.Button();
-            this.evStatDropDown = new System.Windows.Forms.ComboBox();
-            this.txtEVValue = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.evolutionBox = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtPokeIDEvolution = new System.Windows.Forms.TextBox();
+            this.btnSaveEvolutions = new System.Windows.Forms.Button();
             this.pokeDexAddBox.SuspendLayout();
             this.pokeTypeBox.SuspendLayout();
             this.weaknessBox.SuspendLayout();
             this.abilitiesBox.SuspendLayout();
             this.captureLocationBox.SuspendLayout();
             this.evBox.SuspendLayout();
+            this.evolutionBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // pokeDexAddBox
@@ -381,6 +386,37 @@
             this.evBox.TabStop = false;
             this.evBox.Text = "EV";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(9, 82);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 15);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "EV Value";
+            // 
+            // txtEVValue
+            // 
+            this.txtEVValue.Location = new System.Drawing.Point(64, 77);
+            this.txtEVValue.Name = "txtEVValue";
+            this.txtEVValue.Size = new System.Drawing.Size(215, 23);
+            this.txtEVValue.TabIndex = 8;
+            // 
+            // evStatDropDown
+            // 
+            this.evStatDropDown.FormattingEnabled = true;
+            this.evStatDropDown.Items.AddRange(new object[] {
+            "Attack",
+            "Defense",
+            "HitPoint",
+            "SpecialAttack",
+            "SpecialDefense",
+            "Speed"});
+            this.evStatDropDown.Location = new System.Drawing.Point(64, 35);
+            this.evStatDropDown.Name = "evStatDropDown";
+            this.evStatDropDown.Size = new System.Drawing.Size(215, 23);
+            this.evStatDropDown.TabIndex = 7;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -400,42 +436,50 @@
             this.btnSaveEV.UseVisualStyleBackColor = true;
             this.btnSaveEV.Click += new System.EventHandler(this.btnSaveEV_Click);
             // 
-            // evStatDropDown
+            // evolutionBox
             // 
-            this.evStatDropDown.FormattingEnabled = true;
-            this.evStatDropDown.Items.AddRange(new object[] {
-            "Attack",
-            "Defense",
-            "HitPoint",
-            "SpecialAttack",
-            "SpecialDefense",
-            "Speed"});
-            this.evStatDropDown.Location = new System.Drawing.Point(64, 35);
-            this.evStatDropDown.Name = "evStatDropDown";
-            this.evStatDropDown.Size = new System.Drawing.Size(215, 23);
-            this.evStatDropDown.TabIndex = 7;
+            this.evolutionBox.Controls.Add(this.label10);
+            this.evolutionBox.Controls.Add(this.txtPokeIDEvolution);
+            this.evolutionBox.Controls.Add(this.btnSaveEvolutions);
+            this.evolutionBox.Location = new System.Drawing.Point(934, 12);
+            this.evolutionBox.Name = "evolutionBox";
+            this.evolutionBox.Size = new System.Drawing.Size(294, 237);
+            this.evolutionBox.TabIndex = 9;
+            this.evolutionBox.TabStop = false;
+            this.evolutionBox.Text = "Evolutions";
             // 
-            // txtEVValue
+            // label10
             // 
-            this.txtEVValue.Location = new System.Drawing.Point(64, 77);
-            this.txtEVValue.Name = "txtEVValue";
-            this.txtEVValue.Size = new System.Drawing.Size(215, 23);
-            this.txtEVValue.TabIndex = 8;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(22, 38);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 15);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "PokeID:";
             // 
-            // label9
+            // txtPokeIDEvolution
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(9, 82);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 15);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "EV Value";
+            this.txtPokeIDEvolution.Location = new System.Drawing.Point(70, 34);
+            this.txtPokeIDEvolution.Name = "txtPokeIDEvolution";
+            this.txtPokeIDEvolution.Size = new System.Drawing.Size(209, 23);
+            this.txtPokeIDEvolution.TabIndex = 5;
+            // 
+            // btnSaveEvolutions
+            // 
+            this.btnSaveEvolutions.Location = new System.Drawing.Point(204, 73);
+            this.btnSaveEvolutions.Name = "btnSaveEvolutions";
+            this.btnSaveEvolutions.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveEvolutions.TabIndex = 4;
+            this.btnSaveEvolutions.Text = "Save";
+            this.btnSaveEvolutions.UseVisualStyleBackColor = true;
+            this.btnSaveEvolutions.Click += new System.EventHandler(this.btnSaveEvolutions_Click);
             // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1300, 677);
+            this.Controls.Add(this.evolutionBox);
             this.Controls.Add(this.evBox);
             this.Controls.Add(this.captureLocationBox);
             this.Controls.Add(this.abilitiesBox);
@@ -456,6 +500,8 @@
             this.captureLocationBox.PerformLayout();
             this.evBox.ResumeLayout(false);
             this.evBox.PerformLayout();
+            this.evolutionBox.ResumeLayout(false);
+            this.evolutionBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -492,5 +538,9 @@
         private ComboBox evStatDropDown;
         private Label label8;
         private Button btnSaveEV;
+        private GroupBox evolutionBox;
+        private Label label10;
+        private TextBox txtPokeIDEvolution;
+        private Button btnSaveEvolutions;
     }
 }

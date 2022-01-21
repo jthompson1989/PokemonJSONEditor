@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿
 
 namespace PokemonJSONEditor_WinForm
 {
@@ -17,11 +9,39 @@ namespace PokemonJSONEditor_WinForm
         {
             InitializeComponent();
             this.selectedListBox = listBox;
+            switch (addType)
+            {
+                case AddType.PokeTypes:
+                    pokeTypeBox.Visible = true;
+                    break;
+                case AddType.Pokedex:
+                    pokeDexAddBox.Visible = true;
+                    break;
+                case AddType.Weakness:
+                    weaknessBox.Visible = true;
+                    break;
+                case AddType.CatchLocation:
+                    captureLocationBox.Visible = true;
+                    break;
+                case AddType.Abilities:
+                    abilitiesBox.Visible = true;
+                    break;
+                case AddType.EV:
+                    evBox.Visible = true;
+                    break;
+                case AddType.Evolution:
+                    evolutionBox.Visible = true;
+                    break;
+                default:
+                    this.Close();
+                    break;
+            }
         }
 
         private void btnSavePokedexEntry_Click(object sender, EventArgs e)
         {
-            this.selectedListBox.Items.Add(String.Format("Version:{0} - {1}", versionDropDown.SelectedItem.ToString(), txtPokedexEntry.Text));
+            this.selectedListBox.Items.Add(String.Format("Version:{0} - {1}", 
+                versionDropDown.SelectedItem.ToString(), txtPokedexEntry.Text));
             this.Close();
         }
 
@@ -52,7 +72,16 @@ namespace PokemonJSONEditor_WinForm
 
         private void btnSaveEV_Click(object sender, EventArgs e)
         {
+            string stat = evStatDropDown.SelectedItem.ToString();
+            string evValue = txtEVValue.Text;
+            this.selectedListBox.Items.Add(string.Format("{0} - {1}", stat, evValue));
+            this.Close();
+        }
 
+        private void btnSaveEvolutions_Click(object sender, EventArgs e)
+        {
+            this.selectedListBox.Items.Add(txtPokeIDEvolution.Text);
+            this.Close();
         }
     }
 
@@ -63,6 +92,7 @@ namespace PokemonJSONEditor_WinForm
         PokeTypes,
         Abilities,
         CatchLocation,
-        EV
+        EV,
+        Evolution
     }
 }

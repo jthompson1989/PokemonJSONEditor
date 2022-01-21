@@ -101,6 +101,8 @@
             this.btnJSONViewer = new System.Windows.Forms.Button();
             this.listEvolutions = new System.Windows.Forms.ListBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.btnAddEvolution = new System.Windows.Forms.Button();
+            this.btnRemoveEvolution = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -650,7 +652,7 @@
             // 
             this.txtEvolveFrom.Location = new System.Drawing.Point(1095, 318);
             this.txtEvolveFrom.Name = "txtEvolveFrom";
-            this.txtEvolveFrom.Size = new System.Drawing.Size(100, 23);
+            this.txtEvolveFrom.Size = new System.Drawing.Size(128, 23);
             this.txtEvolveFrom.TabIndex = 9;
             // 
             // label19
@@ -666,7 +668,7 @@
             // 
             this.txtEvolveReason.Location = new System.Drawing.Point(1095, 347);
             this.txtEvolveReason.Name = "txtEvolveReason";
-            this.txtEvolveReason.Size = new System.Drawing.Size(100, 23);
+            this.txtEvolveReason.Size = new System.Drawing.Size(128, 23);
             this.txtEvolveReason.TabIndex = 31;
             // 
             // label20
@@ -764,9 +766,9 @@
             // 
             this.listEvolutions.FormattingEnabled = true;
             this.listEvolutions.ItemHeight = 15;
-            this.listEvolutions.Location = new System.Drawing.Point(1088, 378);
+            this.listEvolutions.Location = new System.Drawing.Point(1095, 376);
             this.listEvolutions.Name = "listEvolutions";
-            this.listEvolutions.Size = new System.Drawing.Size(118, 64);
+            this.listEvolutions.Size = new System.Drawing.Size(128, 94);
             this.listEvolutions.TabIndex = 39;
             // 
             // label22
@@ -778,11 +780,33 @@
             this.label22.TabIndex = 40;
             this.label22.Text = "Evolutions:";
             // 
+            // btnAddEvolution
+            // 
+            this.btnAddEvolution.Location = new System.Drawing.Point(1229, 378);
+            this.btnAddEvolution.Name = "btnAddEvolution";
+            this.btnAddEvolution.Size = new System.Drawing.Size(75, 23);
+            this.btnAddEvolution.TabIndex = 41;
+            this.btnAddEvolution.Text = "Add";
+            this.btnAddEvolution.UseVisualStyleBackColor = true;
+            this.btnAddEvolution.Click += new System.EventHandler(this.btnAddEvolution_Click);
+            // 
+            // btnRemoveEvolution
+            // 
+            this.btnRemoveEvolution.Location = new System.Drawing.Point(1229, 407);
+            this.btnRemoveEvolution.Name = "btnRemoveEvolution";
+            this.btnRemoveEvolution.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveEvolution.TabIndex = 42;
+            this.btnRemoveEvolution.Text = "Remove";
+            this.btnRemoveEvolution.UseVisualStyleBackColor = true;
+            this.btnRemoveEvolution.Click += new System.EventHandler(this.btnRemoveEvolution_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1324, 696);
+            this.Controls.Add(this.btnRemoveEvolution);
+            this.Controls.Add(this.btnAddEvolution);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.listEvolutions);
             this.Controls.Add(this.btnJSONViewer);
@@ -913,5 +937,7 @@
         private Button btnJSONViewer;
         private ListBox listEvolutions;
         private Label label22;
+        private Button btnAddEvolution;
+        private Button btnRemoveEvolution;
     }
 }

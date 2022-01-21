@@ -415,6 +415,17 @@ namespace PokemonJSONEditor_WinForm
             JSONViewer jViewer = new JSONViewer(json);
             jViewer.Show();
         }
+
+        private void btnAddEvolution_Click(object sender, EventArgs e)
+        {
+            Add addForm = new Add(AddType.Evolution, listEvolutions);
+            addForm.Show();
+        }
+
+        private void btnRemoveEvolution_Click(object sender, EventArgs e)
+        {
+            listEvolutions.Items.Remove(listEvolutions.SelectedItem);
+        }
     }
 
 }

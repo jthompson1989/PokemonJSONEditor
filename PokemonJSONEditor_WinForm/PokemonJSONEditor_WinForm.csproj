@@ -6,7 +6,13 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Great-Ball.ico</ApplicationIcon>
+    <AssemblyName>Pokemon JSON Editor</AssemblyName>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Great-Ball.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Json.Net" Version="1.0.33" />

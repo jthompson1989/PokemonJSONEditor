@@ -108,6 +108,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.txtJsonFile = new System.Windows.Forms.TextBox();
             this.btnLoadJson = new System.Windows.Forms.Button();
+            this.btnEditPokedex = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -852,11 +853,22 @@
             this.btnLoadJson.UseVisualStyleBackColor = true;
             this.btnLoadJson.Click += new System.EventHandler(this.btnLoadJson_Click);
             // 
+            // btnEditPokedex
+            // 
+            this.btnEditPokedex.Location = new System.Drawing.Point(68, 93);
+            this.btnEditPokedex.Name = "btnEditPokedex";
+            this.btnEditPokedex.Size = new System.Drawing.Size(99, 23);
+            this.btnEditPokedex.TabIndex = 48;
+            this.btnEditPokedex.Text = "Edit Pokedex";
+            this.btnEditPokedex.UseVisualStyleBackColor = true;
+            this.btnEditPokedex.Click += new System.EventHandler(this.btnEditPokedex_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1324, 712);
+            this.Controls.Add(this.btnEditPokedex);
             this.Controls.Add(this.btnLoadJson);
             this.Controls.Add(this.txtJsonFile);
             this.Controls.Add(this.label23);
@@ -1001,5 +1013,6 @@
         private Label label23;
         private TextBox txtJsonFile;
         private Button btnLoadJson;
+        private Button btnEditPokedex;
     }
 }

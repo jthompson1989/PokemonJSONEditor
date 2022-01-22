@@ -120,6 +120,7 @@ namespace PokemonJSONEditor_WinForm
             listWeakness.Items.Clear();
             listCatchLocation.Items.Clear();
             listEV.Items.Clear();
+            listEvolutions.Items.Clear();
         }
 
         public void SaveData()
@@ -466,6 +467,24 @@ namespace PokemonJSONEditor_WinForm
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnRemoveEV_Click(object sender, EventArgs e)
+        {
+            listEV.Items.Remove(listEV.SelectedItem);
+        }
+
+        private void pokeDexEditor_Closed(dynamic sender, EventArgs e)
+        {
+            this.selectedPokemon.description = sender.pokeDexEntries;
+            LoadData(this.selectedPokemon);
+        }
+
+        private void btnEditPokedex_Click(object sender, EventArgs e)
+        {
+            PokedexEditor editorForm = new PokedexEditor(this.selectedPokemon.description);
+            editorForm.Show();
+            editorForm.FormClosed += new FormClosedEventHandler(pokeDexEditor_Closed);
         }
     }
 

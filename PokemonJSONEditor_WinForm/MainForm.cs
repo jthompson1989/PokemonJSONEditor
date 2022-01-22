@@ -20,6 +20,7 @@ namespace PokemonJSONEditor_WinForm
         private void LoadData(Pokemon pokemon)
         {
             ClearData();
+            txtPokeID.ReadOnly = true;
 
             txtPokeID.Text = pokemon.id;
             txtPokeHeight.Text = pokemon.height;
@@ -167,8 +168,48 @@ namespace PokemonJSONEditor_WinForm
             }
             else
             {
-                pokemons.Append(pokemon);
+                Array.Resize<Pokemon>(ref pokemons, pokemons.Length + 1);
+                pokemons[pokemons.Length - 1] = pokemon;
             }
+        }
+
+        private void ClearControl()
+        {
+            txtPokeID.Text = "";
+            txtPokemonName.Text = "";
+            txtPokeHeight.Text = "";
+            txtPokeWeight.Text = "";
+            txtCategory.Text = "";
+            pokemonImage.ImageLocation = null;
+
+            txtHitPoint.Text = "";
+            txtAttack.Text = "";
+            txtDefense.Text = "";
+            txtSpAttack.Text = "";
+            txtSpDefense.Text = "";
+            txtSpeed.Text = "";
+
+            txtBaseExp.Text = "";
+
+            txtCatchRate.Text = "";
+
+            txtMalePercent.Text = "";
+            txtFemalePercentage.Text = "";
+            txtEggGroup.Text = "";
+            txtHatchTime.Text = "";
+
+            txtEvolveFrom.Text = "";
+            txtEvolveReason.Text = "";
+
+            txtPokeID.Text = "";
+
+            listPokedex.Items.Clear();
+            listPokeTypes.Items.Clear();
+            listAbilities.Items.Clear();
+            listWeakness.Items.Clear();
+            listCatchLocation.Items.Clear();
+            listEV.Items.Clear();
+            listEvolutions.Items.Clear();
         }
 
         private void PublishData()
@@ -485,6 +526,13 @@ namespace PokemonJSONEditor_WinForm
             PokedexEditor editorForm = new PokedexEditor(this.selectedPokemon.description);
             editorForm.Show();
             editorForm.FormClosed += new FormClosedEventHandler(pokeDexEditor_Closed);
+        }
+
+        private void btnCreateNew_Click(object sender, EventArgs e)
+        {
+            txtPokeID.ReadOnly = false;
+            ClearControl();
+            this.selectedIndex = -1;
         }
     }
 

@@ -109,6 +109,7 @@
             this.txtJsonFile = new System.Windows.Forms.TextBox();
             this.btnLoadJson = new System.Windows.Forms.Button();
             this.btnEditPokedex = new System.Windows.Forms.Button();
+            this.btnCreateNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pokemonImage)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -168,7 +169,7 @@
             this.txtPokeID.Name = "txtPokeID";
             this.txtPokeID.ReadOnly = true;
             this.txtPokeID.Size = new System.Drawing.Size(100, 23);
-            this.txtPokeID.TabIndex = 5;
+            this.txtPokeID.TabIndex = 2;
             // 
             // label3
             // 
@@ -184,14 +185,14 @@
             this.txtPokeHeight.Location = new System.Drawing.Point(234, 66);
             this.txtPokeHeight.Name = "txtPokeHeight";
             this.txtPokeHeight.Size = new System.Drawing.Size(92, 23);
-            this.txtPokeHeight.TabIndex = 7;
+            this.txtPokeHeight.TabIndex = 3;
             // 
             // txtPokeWeight
             // 
             this.txtPokeWeight.Location = new System.Drawing.Point(388, 66);
             this.txtPokeWeight.Name = "txtPokeWeight";
             this.txtPokeWeight.Size = new System.Drawing.Size(92, 23);
-            this.txtPokeWeight.TabIndex = 9;
+            this.txtPokeWeight.TabIndex = 4;
             // 
             // label4
             // 
@@ -207,7 +208,7 @@
             this.txtCategory.Location = new System.Drawing.Point(555, 66);
             this.txtCategory.Name = "txtCategory";
             this.txtCategory.Size = new System.Drawing.Size(142, 23);
-            this.txtCategory.TabIndex = 11;
+            this.txtCategory.TabIndex = 5;
             // 
             // label5
             // 
@@ -272,7 +273,7 @@
             this.btnAddType.Location = new System.Drawing.Point(210, 42);
             this.btnAddType.Name = "btnAddType";
             this.btnAddType.Size = new System.Drawing.Size(75, 23);
-            this.btnAddType.TabIndex = 16;
+            this.btnAddType.TabIndex = 8;
             this.btnAddType.Text = "Add";
             this.btnAddType.UseVisualStyleBackColor = true;
             this.btnAddType.Click += new System.EventHandler(this.btnAddType_Click);
@@ -313,7 +314,7 @@
             this.btnAddWeakness.Location = new System.Drawing.Point(219, 42);
             this.btnAddWeakness.Name = "btnAddWeakness";
             this.btnAddWeakness.Size = new System.Drawing.Size(75, 23);
-            this.btnAddWeakness.TabIndex = 18;
+            this.btnAddWeakness.TabIndex = 9;
             this.btnAddWeakness.Text = "Add";
             this.btnAddWeakness.UseVisualStyleBackColor = true;
             this.btnAddWeakness.Click += new System.EventHandler(this.btnAddWeakness_Click);
@@ -354,7 +355,7 @@
             this.btnAddAbilities.Location = new System.Drawing.Point(219, 42);
             this.btnAddAbilities.Name = "btnAddAbilities";
             this.btnAddAbilities.Size = new System.Drawing.Size(75, 23);
-            this.btnAddAbilities.TabIndex = 20;
+            this.btnAddAbilities.TabIndex = 10;
             this.btnAddAbilities.Text = "Add";
             this.btnAddAbilities.UseVisualStyleBackColor = true;
             this.btnAddAbilities.Click += new System.EventHandler(this.btnAddAbilities_Click);
@@ -395,7 +396,7 @@
             this.txtSpeed.Location = new System.Drawing.Point(218, 131);
             this.txtSpeed.Name = "txtSpeed";
             this.txtSpeed.Size = new System.Drawing.Size(50, 23);
-            this.txtSpeed.TabIndex = 11;
+            this.txtSpeed.TabIndex = 19;
             this.txtSpeed.Text = "0";
             this.txtSpeed.TextChanged += new System.EventHandler(this.txtSpeed_TextChanged);
             // 
@@ -413,7 +414,7 @@
             this.txtSpDefense.Location = new System.Drawing.Point(218, 84);
             this.txtSpDefense.Name = "txtSpDefense";
             this.txtSpDefense.Size = new System.Drawing.Size(50, 23);
-            this.txtSpDefense.TabIndex = 9;
+            this.txtSpDefense.TabIndex = 17;
             this.txtSpDefense.Text = "0";
             this.txtSpDefense.TextChanged += new System.EventHandler(this.txtSpDefense_TextChanged);
             // 
@@ -431,7 +432,7 @@
             this.txtSpAttack.Location = new System.Drawing.Point(218, 40);
             this.txtSpAttack.Name = "txtSpAttack";
             this.txtSpAttack.Size = new System.Drawing.Size(50, 23);
-            this.txtSpAttack.TabIndex = 7;
+            this.txtSpAttack.TabIndex = 15;
             this.txtSpAttack.Text = "0";
             this.txtSpAttack.TextChanged += new System.EventHandler(this.txtSpAttack_TextChanged);
             // 
@@ -449,7 +450,7 @@
             this.txtDefense.Location = new System.Drawing.Point(77, 131);
             this.txtDefense.Name = "txtDefense";
             this.txtDefense.Size = new System.Drawing.Size(50, 23);
-            this.txtDefense.TabIndex = 5;
+            this.txtDefense.TabIndex = 18;
             this.txtDefense.Text = "0";
             this.txtDefense.TextChanged += new System.EventHandler(this.txtDefense_TextChanged);
             // 
@@ -467,7 +468,7 @@
             this.txtAttack.Location = new System.Drawing.Point(77, 79);
             this.txtAttack.Name = "txtAttack";
             this.txtAttack.Size = new System.Drawing.Size(50, 23);
-            this.txtAttack.TabIndex = 3;
+            this.txtAttack.TabIndex = 16;
             this.txtAttack.Text = "0";
             this.txtAttack.TextChanged += new System.EventHandler(this.txtAttack_TextChanged);
             // 
@@ -485,7 +486,7 @@
             this.txtHitPoint.Location = new System.Drawing.Point(77, 40);
             this.txtHitPoint.Name = "txtHitPoint";
             this.txtHitPoint.Size = new System.Drawing.Size(50, 23);
-            this.txtHitPoint.TabIndex = 1;
+            this.txtHitPoint.TabIndex = 14;
             this.txtHitPoint.Text = "0";
             this.txtHitPoint.TextChanged += new System.EventHandler(this.txtHitPoint_TextChanged);
             // 
@@ -546,7 +547,7 @@
             this.txtCatchRate.Location = new System.Drawing.Point(78, 175);
             this.txtCatchRate.Name = "txtCatchRate";
             this.txtCatchRate.Size = new System.Drawing.Size(53, 23);
-            this.txtCatchRate.TabIndex = 1;
+            this.txtCatchRate.TabIndex = 20;
             // 
             // label13
             // 
@@ -643,7 +644,7 @@
             this.txtBaseExp.Location = new System.Drawing.Point(768, 66);
             this.txtBaseExp.Name = "txtBaseExp";
             this.txtBaseExp.Size = new System.Drawing.Size(54, 23);
-            this.txtBaseExp.TabIndex = 29;
+            this.txtBaseExp.TabIndex = 6;
             // 
             // label18
             // 
@@ -659,7 +660,7 @@
             this.txtEvolveFrom.Location = new System.Drawing.Point(1095, 343);
             this.txtEvolveFrom.Name = "txtEvolveFrom";
             this.txtEvolveFrom.Size = new System.Drawing.Size(128, 23);
-            this.txtEvolveFrom.TabIndex = 9;
+            this.txtEvolveFrom.TabIndex = 11;
             // 
             // label19
             // 
@@ -675,7 +676,7 @@
             this.txtEvolveReason.Location = new System.Drawing.Point(1095, 372);
             this.txtEvolveReason.Name = "txtEvolveReason";
             this.txtEvolveReason.Size = new System.Drawing.Size(128, 23);
-            this.txtEvolveReason.TabIndex = 31;
+            this.txtEvolveReason.TabIndex = 12;
             // 
             // label20
             // 
@@ -792,7 +793,7 @@
             this.btnAddEvolution.Location = new System.Drawing.Point(1229, 403);
             this.btnAddEvolution.Name = "btnAddEvolution";
             this.btnAddEvolution.Size = new System.Drawing.Size(75, 23);
-            this.btnAddEvolution.TabIndex = 41;
+            this.btnAddEvolution.TabIndex = 13;
             this.btnAddEvolution.Text = "Add";
             this.btnAddEvolution.UseVisualStyleBackColor = true;
             this.btnAddEvolution.Click += new System.EventHandler(this.btnAddEvolution_Click);
@@ -858,16 +859,27 @@
             this.btnEditPokedex.Location = new System.Drawing.Point(68, 93);
             this.btnEditPokedex.Name = "btnEditPokedex";
             this.btnEditPokedex.Size = new System.Drawing.Size(99, 23);
-            this.btnEditPokedex.TabIndex = 48;
+            this.btnEditPokedex.TabIndex = 7;
             this.btnEditPokedex.Text = "Edit Pokedex";
             this.btnEditPokedex.UseVisualStyleBackColor = true;
             this.btnEditPokedex.Click += new System.EventHandler(this.btnEditPokedex_Click);
+            // 
+            // btnCreateNew
+            // 
+            this.btnCreateNew.Location = new System.Drawing.Point(768, 5);
+            this.btnCreateNew.Name = "btnCreateNew";
+            this.btnCreateNew.Size = new System.Drawing.Size(105, 23);
+            this.btnCreateNew.TabIndex = 49;
+            this.btnCreateNew.Text = "Create New";
+            this.btnCreateNew.UseVisualStyleBackColor = true;
+            this.btnCreateNew.Click += new System.EventHandler(this.btnCreateNew_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1324, 712);
+            this.Controls.Add(this.btnCreateNew);
             this.Controls.Add(this.btnEditPokedex);
             this.Controls.Add(this.btnLoadJson);
             this.Controls.Add(this.txtJsonFile);
@@ -1014,5 +1026,6 @@
         private TextBox txtJsonFile;
         private Button btnLoadJson;
         private Button btnEditPokedex;
+        private Button btnCreateNew;
     }
 }

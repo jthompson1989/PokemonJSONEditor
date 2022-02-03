@@ -534,6 +534,7 @@ namespace PokemonJSONEditor_WinForm
             ClearControl();
             this.selectedIndex = -1;
         }
+
     }
 
 }

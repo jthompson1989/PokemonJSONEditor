@@ -713,6 +713,7 @@
             this.btnRemoveEV.TabIndex = 23;
             this.btnRemoveEV.Text = "Remove";
             this.btnRemoveEV.UseVisualStyleBackColor = true;
+            this.btnRemoveEV.Click += new System.EventHandler(this.btnRemoveEV_Click);
             // 
             // btnAddEV
             // 
